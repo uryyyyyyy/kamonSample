@@ -1,5 +1,5 @@
 
-val kamonVersion = "1.0.0-RC4"
+val kamonVersion = "1.0.0-RC7"
 
 val commonSettings = Seq(
   scalaVersion := "2.12.4",

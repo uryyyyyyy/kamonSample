@@ -9,7 +9,7 @@ class MyMetrics {
 
   val hist1    = Kamon.histogram("my-reporter.my-metrics.hist1")
   val counter1    = Kamon.counter("my-reporter.my-metrics.counter1")
-  val sampler1    = Kamon.minMaxCounter("my-reporter.my-metrics.sampler1")
+  val sampler1    = Kamon.rangeSampler("my-reporter.my-metrics.sampler1")
 
   def update() = {
     logger.info("MyMetrics update")
