@@ -16,6 +16,7 @@ class MyMetrics {
 
     hist1.record(10)
     counter1.increment(1)
+    counter1.increment(1)
     sampler1.increment(2)
   }
 }
