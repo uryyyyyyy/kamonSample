@@ -3,7 +3,7 @@ package com.github.uryyyyyyy.kamon.aspectj
 import org.aspectj.lang.annotation.{After, Aspect, Pointcut}
 
 @Aspect
-class AspectJInstrument {
+class AspectJInstrumentation {
 
   @Pointcut("execution(* com.github.uryyyyyyy.kamon.aspectj.Executor.action(*)) && this(executor) && args(args)")
   def actionPointCut(executor: Executor, args: Array[String]): Unit = {}

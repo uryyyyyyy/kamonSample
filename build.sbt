@@ -63,6 +63,7 @@ lazy val aspectJSample = (project in file("aspectj-sample"))
   .settings(
     javaAgents += "org.aspectj" % "aspectjweaver" % "1.8.13" % "runtime",
     libraryDependencies ++= Seq(
-      "org.aspectj" % "aspectjweaver" % "1.8.13" % "provided"
+      "org.aspectj" % "aspectjweaver" % "1.8.13" % "provided",
+      "com.typesafe.akka" %% "akka-actor" % "2.5.8"
     )
   )

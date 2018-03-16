@@ -2,11 +2,14 @@
 
 <aspectj>
   <aspects>
-    <aspect name="com.github.uryyyyyyy.kamon.aspectj.AspectJInstrument"/>
+    <aspect name="akka.uryyyyyyy.kamon.aspectj.AkkaActorInstrumentation"/>
+    <aspect name="akka.uryyyyyyy.kamon.aspectj.MetricsIntoActorCellsMixin"/>
+    <aspect name="com.github.uryyyyyyy.kamon.aspectj.AspectJInstrumentation"/>
   </aspects>
 
   <weaver>
-    <include within="com.github.uryyyyyyy.kamon.aspectj..*"/>
+    <include within="akka..*"/>
+    <include within="com.github.uryyyyyyy..*"/>
   </weaver>
 
 </aspectj>
