@@ -12,10 +12,10 @@ object Main {
     val system = ActorSystem("mySystem")
     val actor1 = system.actorOf(Props[MyActor])
 
-    (1 to 20).foreach(_ => actor1 ! "hello")
-    Thread.sleep(10000)
-    (1 to 20).foreach(_ => actor1 ! "hello")
-    Thread.sleep(30000)
+    (1 to 10).foreach(_ => actor1 ! "hello")
+    Thread.sleep(5000)
+    (1 to 10).foreach(_ => actor1 ! "hello")
+    Thread.sleep(20000)
 
     Kamon.stopAllReporters()
     Kamon.scheduler().shutdown()

@@ -44,16 +44,13 @@ object ActorInstrumentationBox {
 }
 
 class MailBoxSizeValue(){
-  var boxSize: Int = 0
   val mailboxSize = Kamon.rangeSampler("akka.actor.mailbox-size")
 
   def increment(): Unit ={
-    boxSize += 1
     mailboxSize.increment()
   }
 
   def decrement(): Unit ={
-    boxSize -= 1
     mailboxSize.decrement()
   }
 }

@@ -12,13 +12,13 @@ class MyReporter extends MetricReporter {
   override def reportPeriodSnapshot(snapshot: PeriodSnapshot): Unit = {
     logger.info("reportTickSnapshot")
     snapshot.metrics.counters.foreach(metric => {
-      logger.info(s"name: ${metric.name}, tags: ${metric.tags}, unit: ${metric.unit}, value: ${metric.value}")
+      logger.info(s"name: ${metric.name}, value: ${metric.value}")
     })
     snapshot.metrics.histograms.foreach(metric => {
-      logger.info(s"name: ${metric.name}, tags: ${metric.tags}, unit: ${metric.unit}, value-sum: ${metric.distribution.sum}")
+      logger.info(s"name: ${metric.name}, value-sum: ${metric.distribution.sum}")
     })
     snapshot.metrics.rangeSamplers.foreach(metric => {
-      logger.info(s"name: ${metric.name}, tags: ${metric.tags}, unit: ${metric.unit}, value-max: ${metric.distribution.max}")
+      logger.info(s"name: ${metric.name}, value-max: ${metric.distribution.max}")
     })
   }
 
